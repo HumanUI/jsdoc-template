@@ -1,83 +1,31 @@
-# Braintree JSDoc Template
+# Braintree JSDoc Template for @freshes
 
-A clean, responsive documentation template with search and navigation highlighting for JSDoc 3. Forked from [github.com/nijikokun/minami](https://github.com/nijikokun/minami).
+### 使用方法
 
-![Braintree JS Doc Template Screenshot](https://puu.sh/rWvW0/2831fd69d6.png)
+``` bash
+yarn add -D @freshes/jsdoc-template
+```
 
-## Responsive
-
-![Braintree JS Doc Template Screenshot](https://puu.sh/rWvZ6/aee92a4787.png)
-
-## Uses
-
-- [the Taffy Database library](http://taffydb.com/)
-- [Underscore Template library](http://documentcloud.github.com/underscore/#template)
-- [Algolia DocSearch](https://community.algolia.com/docsearch/)
-
-## Usage
-
-Clone repository to your designated `jsdoc` template directory, then:
-
-
-### Node.js Dependency
-
-In your projects `package.json` file add a generate script:
+编辑你项目的 `package.json` 文件：
 
 ```json
 "script": {
-  "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
+  "docs": "jsdoc -r -c ./docs/jsdoc.json"
 }
 ```
 
-In your `.jsdoc.json` file, add a template option.
+编辑你项目的 `./docs/jsdoc.json` 文件：
 
 ```json
 "opts": {
-  "template": "node_modules/jsdoc-template"
+  "template": "node_modules/jsdoc-template",
+  "destination": "./docs/apis"
 }
 ```
 
-### Example JSDoc Config
+## 感谢
 
-```json
-{
-    "tags": {
-        "allowUnknownTags": true,
-        "dictionaries": ["jsdoc"]
-    },
-    "source": {
-        "include": ["lib", "package.json", "README.md"],
-        "includePattern": ".js$",
-        "excludePattern": "(node_modules/|docs)"
-    },
-    "plugins": [
-        "plugins/markdown"
-    ],
-    "templates": {
-        "referenceTitle": "My SDK Name"
-    },
-    "opts": {
-        "destination": "./docs/",
-        "encoding": "utf8",
-        "private": true,
-        "recurse": true,
-        "template": "./node_modules/jsdoc-template"
-    }
-}
-```
-
-If you would like to enable [Algolia DocSearch](https://community.algolia.com/docsearch/), you can pass a `search` object into the `templates` object.
-
-```json
-"templates": {
-    "search": {
-        "apiKey": "your-api-key",
-        "indexName": "Your index name. Defaults to braintree.",
-        "hitsPerPage": "Number of Results to show. Defaults to 7.",
-    }
-}
-```
-
-## License
-
-Licensed under the Apache2 license.
+- [github.com/nijikokun/minami](https://github.com/nijikokun/minami)
+- [the Taffy Database library](http://taffydb.com/)
+- [Underscore Template library](http://documentcloud.github.com/underscore/#template)
+- [Algolia DocSearch](https://community.algolia.com/docsearch/)
