@@ -1,7 +1,7 @@
 {
-  "name": "jsdoc-template",
-  "version": "3.1.1",
-  "description": "Braintree JSDoc 3 Template",
+  "name": "@freshes/jsdoc-template",
+  "version": "1.0.0",
+  "description": "Braintree JSDoc 3 Template for @freshes",
   "main": "publish.js",
   "scripts": {
     "lint": "eslint .",
@@ -9,19 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/braintree/jsdoc-template"
+    "url": "https://github.com/HumanUI/jsdoc-template.git"
   },
-  "author": "Braintreeps <code@getbraintree.com>",
-  "licenses": [
-    {
-      "type": "Apache-2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0"
-    }
+  "author": [
+    "Braintreeps <code@getbraintree.com>"
+    "Wu Qicheng <wu.qicheng@vitualreaty.com>",
   ],
-  "bugs": {
-    "url": "https://github.com/braintree/jsdoc-template"
-  },
-  "homepage": "https://github.com/braintree/jsdoc-template",
+  "licenses": "MIT",
+  "homepage": "https://github.com/HumanUI/jsdoc-template",
   "devDependencies": {
     "eslint": "^2.13.1",
     "eslint-config-braintree": "^1.0.2",
